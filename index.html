@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- Container for todo list -->
+    <div id="todo-container" class="container my-5">
+        <div id="header" class="text-center mb-4">
+            <h1>To Do List</h1>
+        </div>
+
+        <!-- Input filed and button to add task -->
+        <div id="todo-form" class="d-flex mb-3">
+            <input type="text" class="form-control me-2 input-item" id="inputTask" placeholder="Add Task" />
+            <button id="inputButton" class="btn btn-success">Add</button>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="btn-group mb-3" role="group">
+            <button class="btn btn-outline-primary" data-filter="all">All</button>
+            <button class="btn btn-outline-primary" data-filter="active">Pending</button>
+            <button class="btn btn-outline-primary" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Task List -->
+        <h2 class="text-center">Task List</h2>
+        <ul id="taskList" class="list-group"></ul>
+    </div>
+
+    <hr />
+    <!-- Counter  -->
+    <div class="counter-container text-center">
+       <span> Completed:</span> <span id="completed-counter">0</span> |
+        <span>Pending:</span> <span id="uncompleted-counter">0</span>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
